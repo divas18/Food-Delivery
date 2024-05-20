@@ -64,6 +64,10 @@
     cursor: pointer;
 }
 
+.cart-total button:disabled {
+    background-color: gray;
+}
+
 .cart-promocode {
     flex: 1;
 }

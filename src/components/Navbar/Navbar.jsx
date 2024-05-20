@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Navbar.css";
 import { assets } from "../../assets/assets";
 import { Link } from "react-router-dom";
+import { StoreContext } from "../../context/StoreContext";
 
-const Navbar = () => {
+const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("home");
+  const { getTotalCartAmount } = useContext(StoreContext);
   return (
     <div className="navbar">
-      <a href="/">
+      <Link to="/">
         <img src={assets.logo} alt="logo" className="logo" />
-      </a>
+      </Link>
       <ul className="navbar-menu">
         <Link
           onClick={() => {
@@ -38,7 +40,7 @@ const Navbar = () => {
           Mobile App
         </a>
         <a
-         href="#footer"
+          href="#footer"
           onClick={() => {
             setMenu("contact-us");
           }}
@@ -49,11 +51,13 @@ const Navbar = () => {
       </ul>
       <div className="navbar-right">
         <img src={assets.search_icon} alt="search icon" />
-        <div className="navbar-search-icon">
-          <img src={assets.basket_icon} alt="basket icon" />
-          <div className="dot"></div>
+        <div className="navbar-basket-icon">
+          <Link to="/cart">
+            <img src={assets.basket_icon} alt="basket icon" />
+          </Link>
+          {getTotalCartAmount() > 0 && <div className="dot"></div>}
         </div>
-        <button>sign in</button>
+        <button onClick={() => setShowLogin((prev) => !prev)}>sign in</button>
       </div>
     </div>
   );

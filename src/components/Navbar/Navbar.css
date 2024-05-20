@@ -50,11 +50,11 @@
   border: 1px solid black;
 }
 
-.navbar-search-icon {
+.navbar-basket-icon {
   position: relative;
 }
 
-.navbar-search-icon .dot {
+.navbar-basket-icon .dot {
   position: absolute;
   min-width: 10px;
   min-height: 10px;

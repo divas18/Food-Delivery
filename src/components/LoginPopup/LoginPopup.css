@@ -1,0 +1,73 @@
+.login-popup {
+  display: grid;
+  animation: fadeIn 0.5s;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.login-popup-container .login-popup-title {
+  color: #808080;
+  font-size: 14px;
+  text-align: center;
+}
+
+.login-popup-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.login-popup-inputs input {
+  padding: 12px;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid #c9c9c9;
+}
+
+.login-popup-container button {
+  border: none;
+  width: 100%;
+  padding: 14px 28px;
+  border-radius: 20px;
+  margin-top: 12px;
+  background: tomato;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-popup-container button:hover {
+  background: green;
+  transition: background 0.5s;
+}
+
+.login-popup-condition {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.login-popup-condition input {
+    cursor: pointer;
+}
+
+.login-popup-condition label {
+    cursor: pointer;
+}
+
+.account-status {
+    margin-top: 12px;
+    text-align: center;
+
+    span {
+        color: dodgerblue;
+        cursor: pointer;
+    }
+
+    span:hover {
+        text-decoration: underline;
+    }
+}
